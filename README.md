@@ -39,10 +39,10 @@ Persistencia:
 - Disponibles al recargar la página
 
 ## 🎨 Vista previa
-[Input: "Comprar leche"] → [Botón Agregar]
-↓
-• Comprar leche [X]
-• Hacer ejercicio [X]
+- [Input: "Comprar leche"] → [Botón Agregar]
+- ↓
+- • Comprar leche [X]
+- • Hacer ejercicio [X]
 ## 💾 Estructura del código
 index.html
 - ├── CSS
