@@ -1,0 +1,31 @@
+ body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .task-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .task-item:last-child {
+            border-bottom: none;
+        }
+        .task-text {
+            flex-grow: 1;
+            margin-right: 15px;
+        }
+        .empty-list {
+            color: #6c757d;
+            text-align: center;
+            padding: 20px;
+        }
