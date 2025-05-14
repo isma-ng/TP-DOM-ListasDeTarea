@@ -3,13 +3,11 @@
             const addTaskBtn = document.getElementById('addTaskBtn');
             const taskList = document.getElementById('taskList');
             
-            // Cargar tareas desde localStorage al iniciar
             loadTasks();
             
-            // Agregar tarea al hacer clic en el botón
             addTaskBtn.addEventListener('click', addTask);
             
-            // Agregar tarea al presionar Enter
+
             taskInput.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     addTask();
@@ -24,7 +22,6 @@
                     return;
                 }
                 
-                // Crear elemento de tarea
                 const taskItem = document.createElement('div');
                 taskItem.className = 'task-item';
                 taskItem.innerHTML = `
@@ -32,20 +29,16 @@
                     <button class="btn btn-danger btn-sm delete-btn">Eliminar</button>
                 `;
                 
-                // Agregar a la lista
                 if (taskList.querySelector('.empty-list')) {
                     taskList.innerHTML = '';
                 }
                 taskList.appendChild(taskItem);
                 
-                // Guardar en localStorage
                 saveTasks();
                 
-                // Limpiar input y enfocar
                 taskInput.value = '';
                 taskInput.focus();
                 
-                // Agregar evento al botón eliminar
                 taskItem.querySelector('.delete-btn').addEventListener('click', function() {
                     taskItem.remove();
                     if (taskList.children.length === 0) {
@@ -78,7 +71,6 @@
                         `;
                         taskList.appendChild(taskItem);
                         
-                        // Agregar evento al botón eliminar
                         taskItem.querySelector('.delete-btn').addEventListener('click', function() {
                             taskItem.remove();
                             if (taskList.children.length === 0) {
